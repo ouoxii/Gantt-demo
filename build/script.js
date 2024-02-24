@@ -16,7 +16,7 @@ let tasks = [
     },
     {
         id: 'Task 3',
-        name: 'Chen feature/max-participants',
+        name: 'Chen feature/restricting-event-front-end ',
         start: '2023-12-17',
         end: '2023-12-25',
         progress: 100,
@@ -78,11 +78,11 @@ let ganttChart = new Gantt("#gantt", tasks, {
     },
     custom_popup_html: function (task) {
         return `
-          <div class="details-container" style="width:200px;margin: 10px">
-            <h5>${task.name}</h5>
-            <p>Task started on: ${task._start.getDate()}</p>
-            <p>Expected to finish by ${task._end.getDate()}</p>
-            <p>${task.progress}% completed!</p>
+          <div class="details-container" style="width:220px;margin: 10px">
+            <p><img src="../img/branch-svgrepo-com.svg" alt="SVG Icon" width="16" height="16">${task.name}</p>
+            <p>refactor: restrict-for-event-condition</p>
+            <p>feat: restrict-for-cancel-button</p>
+            <p style="text-align:right">${task.progress}% completed!</p>
           </div>
         `;
     }
